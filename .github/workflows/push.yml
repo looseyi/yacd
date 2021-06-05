@@ -123,7 +123,8 @@ jobs:
           file: ./Dockerfile
           platforms: linux/amd64,linux/arm/v7,linux/arm64
           push: true
-          tags: ${{ steps.docker_meta.outputs.tags }}
+          # tags: ${{ steps.docker_meta.outputs.tags }}
+          tags: haishanh/yacd:latest,haishanh/yacd:v0.3.0
           labels: ${{ steps.docker_meta.outputs.labels }}
 
       - name: Send Notification
